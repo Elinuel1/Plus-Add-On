@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML select Challenge</title>
+  </head>
+
+  <body>
+    <form action="/submit">
+      <label for="fruits">What is your favorite fruit?</label>
+      <div>
+        <select name="" id="fruits">
+          <option value="">Select a fruit</option>
+          <option value="orange">Orange</option>
+          <option value="pawpaw">Pawpaw</option>
+          <option value="watermelon">Watermelon</option>
+          <option value="strawberry">Strawberry</option>
+          <option value="banana">Banana</option>
+        </select>
+      </div>
+      <label for="colors">Which is your favorite primary color?</label>
+      <div>
+        <select name="" id="colors">
+          <option value="">Select a color</option>
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+          <option value="yellow">Yellow</option>
+        </select>
+      </div>
+    </form>
+
+    <script>
+      function emojiAlert(event) {
+        if (event.target.value.length > 0) {
+          if (event.target.value === "red") {
+            alert("❤️");
+          }
+          if (event.target.value === "yellow") {
+            alert("💛");
+          }
+          if (event.target.value === "blue") {
+            alert("💙");
+          }
+        }
+      }
+
+      let color = document.querySelector("#colors");
+      color.addEventListener("change", emojiAlert);
+    </script>
+  </body>
+</html>
